@@ -27,6 +27,9 @@ app.set('view engine', 'ejs');
 dbConnection();
 
 // router
+app.use("/", (_req : any, res : any) => {
+      res.send("App done by Bryan Jesus")
+})
 app.use("/auth", authRouter);
 app.use("/profile", authenticated, profileRouter);
 

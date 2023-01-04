@@ -48,6 +48,9 @@ app.set('view engine', 'ejs');
 // db connection
 (0, connection_1.default)();
 // router
+app.use("/", function (_req, res) {
+    res.send("App done by Bryan Jesus");
+});
 app.use("/auth", auth_1.default);
 app.use("/profile", authenticated_1.authenticated, profile_1.default);
 // server
